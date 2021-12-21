@@ -113,6 +113,7 @@ namespace Complete
             // Adjust the rigidbodies position and orientation in FixedUpdate.
             Move ();
             Turn ();
+            m_Transform();
         }
 
 
@@ -136,6 +137,18 @@ namespace Complete
 
             // Apply this rotation to the rigidbody's rotation.
             m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);
+        }
+
+        private void m_Transform()
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                GameObject.Find("TankTurret").transform.Rotate(0, 2, 0);
+            }
+            else if(Input.GetKey(KeyCode.Q) )
+            {
+                GameObject.Find("TankTurret").transform.Rotate(0, -2, 0);              
+            }
         }
     }
 }
