@@ -145,7 +145,7 @@ namespace Complete
             {
                 GameObject.Find("TankTurret").transform.Rotate(0, 2, 0);
             }
-            else if(Input.GetKey(KeyCode.Q) )
+            else if(Input.GetKey(KeyCode.Q))
             {
                 GameObject.Find("TankTurret").transform.Rotate(0, -2, 0);              
             }
